@@ -113,9 +113,11 @@ function App() {
       setFile("");
       return;
     }
-    const PORT = process.env.PORT || 8000;
-    const url = "http://localhost:" + PORT + "/uploadFile";
+    //const PORT = process.env.PORT || 8000;
+    //const url = "http://localhost:" + PORT + "/uploadFile";
     //const url = "https://erstelledocs.onrender.com/uploadFile";
+    const url =
+      "https://kundenportal-backend-production.up.railway.app/createPdf";
     const formData = new FormData();
     formData.append("file", fileToUse);
     formData.append("fileName", fileToUse.name);
@@ -178,10 +180,11 @@ function App() {
     }
 
     event.preventDefault();
-    const PORT = process.env.PORT || 8000;
-    const url = "http://localhost:" + PORT + "/uploadAusweis";
+    //const PORT = process.env.PORT || 8000;
+    //const url = "http://localhost:" + PORT + "/uploadAusweis";
     //const url = "https://erstelledocs.onrender.com/uploadAusweis";
-
+    const url =
+      "https://kundenportal-backend-production.up.railway.app/createPdf";
     const formData = new FormData();
     formData.append("file", fileToUse);
     formData.append("fileName", fileToUse.name);
@@ -245,9 +248,11 @@ function App() {
       return;
     }
     event.preventDefault();
-    const PORT = process.env.PORT || 8000;
-    const url = "http://localhost:" + PORT + "/uploadStromrechnung";
+    //const PORT = process.env.PORT || 8000;
+    //const url = "http://localhost:" + PORT + "/uploadStromrechnung";
     //const url = "https://erstelledocs.onrender.com/uploadStromrechnung";
+    const url =
+      "https://kundenportal-backend-production.up.railway.app/uploadStromrechnung";
     const formData = new FormData();
     formData.append("file", fileToUse);
     formData.append("fileName", fileToUse.name);
@@ -311,10 +316,12 @@ function App() {
       return;
     }
     event.preventDefault();
-    const PORT = process.env.PORT || 8000;
-    const url = "http://localhost:" + PORT + "/uploadKataster";
+    //const PORT = process.env.PORT || 8000;
+    //const url = "http://localhost:" + PORT + "/uploadKataster";
 
     //const url = "https://erstelledocs.onrender.com/uploadKataster";
+    const url =
+      "https://kundenportal-backend-production.up.railway.app/uploadKataster";
     const formData = new FormData();
     formData.append("file", fileToUse);
     formData.append("fileName", fileToUse.name);
@@ -491,10 +498,12 @@ function App() {
     const id = toast.loading("Bitte warten, ihre Daten werden übermittelt.", {
       autoClose: false,
     });
-    const PORT = process.env.PORT || 8000;
-    const url = "http://localhost:" + PORT + "/createPdf";
+    //const PORT = process.env.PORT || 8000;
+    //const url = "http://localhost:" + PORT + "/createPdf";
 
     //const url = "https://erstelledocs.onrender.com/createPdf";
+    const url =
+      "https://kundenportal-backend-production.up.railway.app/createPdf";
 
     axios
       .post(url, data)
